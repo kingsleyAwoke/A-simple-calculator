@@ -45,7 +45,7 @@ for (let i = 0; i < operator.length; i++) {
             let output = revserNumberFormat(getOutput()).toString();
 
             if (output) {
-                output = output.substring(0, output.length - 1);
+                output = output.slice(0, output.length - 1);
                 printOutput(output);
             }
         } else {
@@ -53,7 +53,7 @@ for (let i = 0; i < operator.length; i++) {
             let history = getHistory();
             if (output == "" && history != "") {
                 if (isNaN(history[history.length - 1])) {
-                    history = history.substring(0, history.length - 1);
+                    history = history.slice(0, history.length - 1);
                 }
             }
             if (output != "" || history != "") {
